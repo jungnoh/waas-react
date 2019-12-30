@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'; //React 불러옴
 
-const SayHi = (props) => {
+const SayHi = (props) => { //SayHi component 정의
   return (
-    <div>님 안녕하세요.</div>
+    <div>{props.name}님 안녕하세요.</div>
   );
 }
 
-export default SayHi;
+export default SayHi; //SayHi component 내보냄
