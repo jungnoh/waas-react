@@ -1,0 +1,22 @@
+.container {
+    margin-left: 20vw;
+    width: 60vw;
+    background-color: #DDD;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+.list-container {
+    margin-top: 1rem;
+}
+.title {
+    font-size: 2rem;
+    margin-bottom: 2em;
+}
+.blue-text {
+    color: rgb(66, 165, 245);
+}
+.name-item {
+    margin-bottom: 0.2em;
+    user-select: none;
+}
