@@ -12,7 +12,7 @@
 > npm run dev는 어떤 역할을 하나요?
 
 package.json에 있는 script 중 dev를 실행시킨다.
-> npm run dev 처럼 서버를 실행하지 않고, 한번 빌드만 해서 `output` 폴더에 저장하고 싶습니다.
+> npm run dev 처럼 서버를 실행하지 않고, 한번 빌드만 해서 `output` 폴더에 저장하고 싶습니다.ㅈ
 > 이런 기능을 `npm run build`로 실행하도록 `package.json` 파일에 명령을 추가하세요.
 
 scripts에 "build": "parcel build src/index.html --out-dir ./output" 을 추가한다
