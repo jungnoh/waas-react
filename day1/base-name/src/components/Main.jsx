@@ -7,7 +7,8 @@ const Main = (props) => {
   return (
     <>
       <NameInput />
-      <SayHi name="김명중" />
+      <SayHi name="김명중" props='name' />
+        
     </>
   );
 };
