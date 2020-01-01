@@ -57,8 +57,9 @@ npm run은 package.json 안에 있는 scripts를 보고 실행함 (npm install�
 >> 힌트: [Parcel 문서](https://parceljs.org/cli.html)
 
 ```JSON
-"build": "parcel build src/index.html" 을 추가함!
+"build": "parcel build src/index.html"
 ```
+을 추가함!
 
 build 가 애셋을 한 번 빌드한데유. 만들어진 파일들이 읽기 불편한 이유는 코드 최소화가 활성화되서 고럼.
 
