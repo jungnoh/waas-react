@@ -13,7 +13,17 @@
 
 > `npm i`는 어떤 역할이며, `package.json`에서 어떤 부분을 읽을까요?
 
+npm i 는 npm install 의 줄임말으로 Node.js 에서 사용할 수 있는 패키지를 설치함.
+
+npm(node package manager)은 자바 스크립트 패키지 매니저 이다. -> Node.js 에서 사용할 수 있는 모듈들을 패키지화해서 모아둔 저장소 AND 패키지 설치 관리를 위한 CLI (command line interface)를 제공함!
+
+npm i 는 package.json 에서 이름(name)과 버젼(version)을 읽어옴! (사실 이 두부분은 꼭 채워져 있어야 한다고 해서...)
+
+npm install 은 package.json 의 dependencies에 적혀있는 모듈들을 설치한다고 함.
+
 > `npm i`로 설치한 파일은 어디에 저장될까요?
+
+고 명령을 실행한 파일이요!
 
 `npm run dev`를 실행한 후, `localhost:1234`에 접속합니다. 아래와 같은 창이 떠야 합니다.
 
@@ -38,9 +48,19 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 
 > npm run dev는 어떤 역할을 하나요?
 
+npm run은 package.json 안에 있는 scripts를 보고 실행함 (npm install과 비슷?) 그리고 npm run dev는 그중 "dev"를 실행한 것 뿐 (test를 실행해보면 input이 없다고 오류가 난다는....?). 그리고 이는 "parcel src/index.html"을 실행함. 아마 parcel이라는 툴로 index.html을 눈치껏 실행하라는 뜻인거 같음.
+
+
+
 > npm run dev 처럼 서버를 실행하지 않고, 한번 빌드만 해서 `output` 폴더에 저장하고 싶습니다.
 > 이런 기능을 `npm run build`로 실행하도록 `package.json` 파일에 명령을 추가하세요.
 >> 힌트: [Parcel 문서](https://parceljs.org/cli.html)
+
+```JSON
+"build": "parcel build src/index.html" 을 추가함!
+```
+
+build 가 애셋을 한 번 빌드한데유. 만들어진 파일들이 읽기 불편한 이유는 코드 최소화가 활성화되서 고럼.
 
 ### 2. React 코드 읽어보기
 
@@ -48,6 +68,8 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 [강좌](https://velopert.com/3612)
 
 > 리액트에서 많은 양의 컴포넌트를 빠르게 그리기 위해 사용하는 기술은?
+
+Virtual DOM!! -> 변화가 일어나면 여기서 돌려보고 바뀐 부분만 업데이트를 하는 거쥐!
 
 리액트에서 요소를 표현할 때는 HTML을 닮은 JSX라는 형태를 사용합니다.
 [이 글](https://velopert.com/3626)을 읽으면서 JSX에 대해 알아보세요.
@@ -59,6 +81,12 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 
 > `src/components/NameInput.jsx`의 9, 10번 줄에서 각 컴포넌트는 어디서 가져오는 걸까요?
 
+```JSX
+import SayHi from './SayHi';
+import NameInput from './NameInput';
+```
+요기서 가져왔지요!
+
 > `src/components/SayHi.jsx`에서 1, 3, 9번 줄에 어떤 코드인지 설명하는 주석을 다세요.
 
 ### 3. Prop 사용해보기
@@ -69,6 +97,14 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 <SayHi name="김명중" />
 ```
 > name에 저장된 값 그대로 전달해서 '김명중님 안녕하세요' 라고 뜨게 코드를 바꿔봅시다.
+
+```JSX
+const SayHi = (props) => {
+  return (
+    <div>{props.name}님 안녕하세요.</div>
+  );
+}
+```
 
 #### 참고사항
 - '김명중' 값 자체를 SayHi.jsx에 적으면 안됩니다. 즉, `name`값을 바꾸면 화면에 뜨는 값도 달라져아 합니다.
