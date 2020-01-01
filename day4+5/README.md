@@ -8,6 +8,7 @@
 
 `counter` 폴더로 이동해서 패키지를 설치하고, 실행해 보곘습니다. 아래와 같은 화면이 나옵니다.
 ![counter img](imgs/counter.png) 
+
 `component/Main.jsx`를 수정해 보겠습니다.
 브라우저 창 제목에 카운터 값이 나오도록 하고 싶습니다. 이를 구현하기 위해 `updateValue` 함수의 `setValue` 이후 아래 코드를 추가해 보겠습니다.
 ```js
@@ -15,6 +16,7 @@ document.title = `Counter: ${value}`;
 ```
 이렇게 작성한 후 페이지를 실행해보면, 제목이 바뀌기는 하는데 뭔가 이상합니다.
 ![counter title](imgs/title-bs.png)
+
 제목의 변화가 한 템포 느립니다. 왜 이럴까요?
 
 우리 눈에는 리액트에서 상태를 변화시키면 바로 반영되는 것처럼 보입니다. 하지만 실제로는 그렇지 않습니다.
@@ -33,6 +35,7 @@ document.title = `Counter: ${value}`;
 카운터의 CSS가 어떻게 이루어져 있는지 살펴보겠습니다.
 버튼의 클래스를 보면, 뭔가 정상적인 이름이 아닙니다.
 ![asdf](imgs/btn-class.png)
+
 왜 이렇게 되었는지 `components/ClickButton.jsx`에서 알아보겠습니다.
 
 > 5번 러인에서 `const {index, onClick} = props;`가 어떤 의미인지
