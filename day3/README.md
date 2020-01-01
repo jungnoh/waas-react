@@ -6,7 +6,7 @@
 
 > [이 문서를 읽고](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 > 10번 라인의 `...nameList`가 어떤 기능인지 설명하세요.
-- 원래의 nameList 배열 안의 값들을 인자로써 넘긴다. 즉, 배열에 
+- 원래의 nameList 배열 안의 값들을 인자로써 넘긴다. 즉, 배열 끝에 새로운 인자를 push_back 한다.
 
 > 리액트에서 리스트를 어떻게 처리하는지 [리액트 공식문서](https://ko.reactjs.org/docs/lists-and-keys.html)를 읽어보고,
 > nameList의 내용이 `<NameDisplay />`들로 출력되게 수정하세요.
