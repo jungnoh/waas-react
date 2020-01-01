@@ -2,9 +2,11 @@ import React from 'react';
 
 const NameDisplay = (props) => {
   return (
-    <div className="name-item">
-      - {props.name}
-    </div>
+    props.nameList.map((name,index) =>
+      <li key = {index}>
+        {name}
+      </li>
+    )
   );
 }
 
