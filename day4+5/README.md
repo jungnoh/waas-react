@@ -65,7 +65,7 @@ Styled component는 위에서 봤듯이 난수로 클래스명을 지정해주�
 전달된 `index` 값으로 `grid-row` 속성을 지정해 주고 있는 것을 볼 수 있습니다.
 
 > `ClickButton.jsx`를 참고해서,
-> `<div className="container">`의 디자인을
+> `Main.jsx`의 `<div className="container">`의 디자인을
 > CSS 컴포넌트로 바꿔보세요.
 
 ### 참고사항
