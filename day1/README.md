@@ -14,6 +14,7 @@
 > `npm i`는 어떤 역할이며, `package.json`에서 어떤 부분을 읽을까요?
 
 > `npm i`로 설치한 파일은 어디에 저장될까요?
+* npm i는 package.json에서 dependencies항목을 읽어 나열된 모든 모듈을 로컬 node_modules폴더에 설치한다.
 
 `npm run dev`를 실행한 후, `localhost:1234`에 접속합니다. 아래와 같은 창이 떠야 합니다.
 
@@ -37,7 +38,7 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 번들링에 대표적으로 사용되는 툴은 Webpack, Parcel 등이 있습니다. 우리는 여기서 Parcel을 사용합니다.
 
 > npm run dev는 어떤 역할을 하나요?
-
+* npm run dev는 개발서버를 실행하는 코드이다.
 > npm run dev 처럼 서버를 실행하지 않고, 한번 빌드만 해서 `output` 폴더에 저장하고 싶습니다.
 > 이런 기능을 `npm run build`로 실행하도록 `package.json` 파일에 명령을 추가하세요.
 >> 힌트: [Parcel 문서](https://parceljs.org/cli.html)
@@ -48,6 +49,7 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 [강좌](https://velopert.com/3612)
 
 > 리액트에서 많은 양의 컴포넌트를 빠르게 그리기 위해 사용하는 기술은?
+* 미해결
 
 리액트에서 요소를 표현할 때는 HTML을 닮은 JSX라는 형태를 사용합니다.
 [이 글](https://velopert.com/3626)을 읽으면서 JSX에 대해 알아보세요.
@@ -58,7 +60,7 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 > `src/index.js`의 각 줄에 주석을 달아보세요. 주석이 5개가 있어야 합니다.
 
 > `src/components/NameInput.jsx`의 9, 10번 줄에서 각 컴포넌트는 어디서 가져오는 걸까요?
-
+* 미해결
 > `src/components/SayHi.jsx`에서 1, 3, 9번 줄에 어떤 코드인지 설명하는 주석을 다세요.
 
 ### 3. Prop 사용해보기
