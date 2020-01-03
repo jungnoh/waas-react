@@ -41,6 +41,7 @@ document.title = `Counter: ${value}`;
 > 5번 러인에서 `const {index, onClick} = props;`가 어떤 의미인지
 > [문서를 읽고](https://poiemaweb.com/es6-destructuring#2-%EA%B0%9D%EC%B2%B4-%EB%94%94%EC%8A%A4%ED%8A%B8%EB%9F%AD%EC%B2%98%EB%A7%81-object-destructuring)
 > 설명해 보세요.
++ 매개인자(props)로 받은 index, onClick을 저장
 
 6번 라인부터 보면, Button이라는 변수에 CSS 속성이 왕창 저장되고, 아래 `return` 부분애서
 이 값을 컴포넌트처럼 쓰고 있습니다.
