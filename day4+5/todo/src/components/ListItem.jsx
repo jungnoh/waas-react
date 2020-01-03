@@ -11,7 +11,13 @@ import styled from 'styled-components';
  * - done: 완료된 항목인지 여부 (`boolean`)
  */
 const ListItem = (props) => {
-  const {value, showComplete, onDelete, onComplete, done} = props;
+  const {value, showComplete, onDelete, onComplete, done, id} = props;
+  const handleDelete = () => {
+    onDelete(id);
+  }
+  const handleComplete = () => {
+    onComplete(id);
+  }
   const Container = styled.div`
     padding: 1em 0.5em;
     border-radius: 0.4em;
@@ -37,8 +43,8 @@ const ListItem = (props) => {
   return (
     <Container>
       <span>{value}</span>
-      { showComplete ? <span className="action action-done" onClick={onComplete}>완료</span> : "" }
-      <span className="action action-delete" onClick={onDelete}>삭제</span>
+      { showComplete ? <span className="action action-done" onClick={handleComplete}>완료</span> : "" }
+      <span className="action action-delete" onClick={handleDelete}>삭제</span>
     </Container>
   );
 };
