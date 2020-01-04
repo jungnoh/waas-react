@@ -8,10 +8,12 @@ import styled from 'styled-components';
  */
 const AddInput = (props) => {
   const [value, setValue] = useState('');
+
   const handleClick = () => {
     if (value.trim() === '') return;
     props.onInput(value);
   }
+
   return (
     <Container>
       <input
@@ -25,17 +27,18 @@ const AddInput = (props) => {
   );
 };
 
-const Container = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto 80px;
-  flex-direction: row;
-  input {
-    grid-column: 1 / 2;
-  }
-  button {
-    grid-column: 2 / 3;
-  }
-`;
 
 export default AddInput;
+
+const Container = styled.div`
+width: 100%;
+display: grid;
+grid-template-columns: auto 80px;
+flex-direction: row;
+input {
+  grid-column: 1 / 2;
+}
+button {
+  grid-column: 2 / 3;
+}
+`;

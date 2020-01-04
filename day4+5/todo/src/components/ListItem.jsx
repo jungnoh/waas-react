@@ -11,33 +11,35 @@ import styled from 'styled-components';
  * - done: 완료된 항목인지 여부 (`boolean`)
  */
 const ListItem = (props) => {
-  const {value, showComplete, onDelete, onComplete, done} = props;
+  const {value, onDelete, onComplete, done} = props;
+
   const Container = styled.div`
-    padding: 1em 0.5em;
-    border-radius: 0.4em;
-    font-size: 0.9rem;
-    margin-bottom: 0.2em;
-    border-bottom: 1px solid #ddd;
-    .action {
-      color: #333;
-      float: right; 
-      margin: 0 0.2em;
-      user-select: none;
-    }
-    .action-delete:hover {
-      color: #cc0000;
-    }
-    .action-done:hover {
-      color: #009900;
-    }
-    span:nth-child(1) {
-      text-decoration: ${done ? 'line-through' : 'none'};
-    }
+  padding: 1em 0.5em;
+  border-radius: 0.4em;
+  font-size: 0.9rem;
+  margin-bottom: 0.2em;
+  border-bottom: 1px solid #ddd;
+  .action {
+    color: #333;
+    float: right; 
+    margin: 0 0.2em;
+    user-select: none;
+  }
+  .action-delete:hover {
+    color: #cc0000;
+  }
+  .action-done:hover {
+    color: #009900;
+  }
+  span:nth-child(1) {
+    text-decoration: ${done ? 'line-through' : 'none'};
+  }
   `;
+
   return (
     <Container>
       <span>{value}</span>
-      { showComplete ? <span className="action action-done" onClick={onComplete}>완료</span> : "" }
+      { done ? "" :  <span className="action action-done" onClick={onComplete}>완료</span> }
       <span className="action action-delete" onClick={onDelete}>삭제</span>
     </Container>
   );
