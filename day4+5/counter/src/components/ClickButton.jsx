@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const ClickButton = (props) => {
   const {index, onClick} = props;
+  //props.index를 index변수에, props.onClick를 onClick변수에 저장한다는 의미
   const Button = styled.div`
     height: 2.5rem;
     width: 2.5rem;
