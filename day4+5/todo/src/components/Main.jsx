@@ -7,19 +7,18 @@ const Main = () => {
   // 이 state들을 사용하세요
   const [todo, setTodo] = useState([]);
   const [done, setDone] = useState([]);
-  let isDelete = 2;
 
   const deleteBtn = (a, index) => {
-    //console.log(todoDisList);
-    isDelete=a;
-    console.log(todoDisList);
-    if(a===0){todo.splice(index,1);/*todoDisList.splice(index,1);*/}
-    if(a===1){done.splice(index,1);/*doneDisList.splice(index,1);*/}
+    if (a === 0) {
+      const newTodo = [...todo];
+      newTodo.splice(index, 1);
+      setTodo(newTodo);
+    } else if (a === 1) {
+      const newDone = [...done];
+      newDone.splice(index, 1);
+      setDone(newDone);
+    }
   }
-
-  useEffect(()=>{
-    
-  });
 
   const doneBtn = (index) => {
     setDone([...done, todo[index]]);
