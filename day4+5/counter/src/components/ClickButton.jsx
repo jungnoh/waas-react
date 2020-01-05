@@ -27,7 +27,7 @@ const ClickButton = (props) => {
   return (
     <Button>
       <div className="inner" onClick={() => onClick()}>
-        {props.children}
+      {props.children}
       </div>
     </Button>
   );
