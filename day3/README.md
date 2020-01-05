@@ -20,6 +20,12 @@ HTML과 달리, 리액트는 `className` 속성을 사용합니다.
 
 > `index.css`를 참고해서, Name List 제목이 파란색이 되도록 `className`를 수정해 보세요.
 
+```JSX
+<span className="title blue-text">Name List</span>
+{/* blue-text 추가함*/}
+```
+className 에 html처럼 blue-text추가했더니 됨!
+
 ## for문으로 리스트 출력하기
 
 다시 `components/Main.jsx`를 살펴봅시다.
@@ -31,11 +37,37 @@ HTML과 달리, 리액트는 `className` 속성을 사용합니다.
 
 > addClick 핸들러를 수정해서 `nameList`에 이름이 추가되도록 수정하세요.
 
+```JSX
+<NameInput addClick={addName} />
+{/*onAddClick -> addName 으로 수정*/}
+```
+
+
 > [이 문서를 읽고](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 > 10번 라인의 `...nameList`가 어떤 기능인지 설명하세요.
 
+```
+setNameList([...nameList, name]);
+//nameList에 있던 갯수만큼 넣어주는 거지요!
+```
+원래 배열의 값들을 전개하는 느낌!
+
+
 > 리액트에서 리스트를 어떻게 처리하는지 [리액트 공식문서](https://ko.reactjs.org/docs/lists-and-keys.html)를 읽어보고,
 > nameList의 내용이 `<NameDisplay />`들로 출력되게 수정하세요.
+
+```jsx
+const listItems = nameList.map((number) => {
+     return <NameDisplay name={number} />
+});
+```
+이런 리스트를 만들었습니다.
+```JSX
+      <div className="list-container">
+        {listItems}
+      </div>
+```
+그리고 요렇게 사용!
 
 - 실행했을 때 Console 창에서 key와 관련된 경고가 뜨지 않아야 합니다. (어떻게 수정해야 할까요? 오류 메세지를 잘 읽어보세요)
 - [추가 설명](https://m.blog.naver.com/gi_balja/221245300411)
@@ -53,3 +85,11 @@ Prop에 컴포넌트를 통째로 넣어줄 수 없을까요? 가능합니다.
 
 > `NameDisplay`의 구현을 참고해서, `EmptyNameDisplay`를 사용하면서
 > `NameDisplay`를 사용할 때와 똑같이 출력되도록 `Main`을 수정하세요.
+
+```jsx
+const listItems = nameList.map((number) => {
+     return <EmptyNameDisplay>-{number}<br></br></EmptyNameDisplay>
+});
+```
+
+함수를 이렇게 바꿈!
