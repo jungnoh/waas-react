@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'; // import React
 
-const SayHi = (props) => {
+const SayHi = (props) => { // define SayHi
   return (
-    <div>님 안녕하세요.</div>
+    <div>{props.name}님 안녕하세요.</div>
   );
 }
 
-export default SayHi;
+export default SayHi; //Export SayHi

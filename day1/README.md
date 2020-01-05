@@ -13,7 +13,11 @@
 
 > `npm i`는 어떤 역할이며, `package.json`에서 어떤 부분을 읽을까요?
 
+npm install, dependencies
+
 > `npm i`로 설치한 파일은 어디에 저장될까요?
+
+node_modules
 
 `npm run dev`를 실행한 후, `localhost:1234`에 접속합니다. 아래와 같은 창이 떠야 합니다.
 
@@ -38,9 +42,13 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 
 > npm run dev는 어떤 역할을 하나요?
 
+package.json 파일에서 scripts의 dev 스크립트 실행(이 경우 parcel src/index.html)
+
 > npm run dev 처럼 서버를 실행하지 않고, 한번 빌드만 해서 `output` 폴더에 저장하고 싶습니다.
 > 이런 기능을 `npm run build`로 실행하도록 `package.json` 파일에 명령을 추가하세요.
->> 힌트: [Parcel 문서](https://parceljs.org/cli.html)
+>
+> > 힌트: [Parcel 문서](https://parceljs.org/cli.html)
+"build": "parcel build src/index.html --out-dir ./output"
 
 ### 2. React 코드 읽어보기
 
@@ -49,6 +57,8 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 
 > 리액트에서 많은 양의 컴포넌트를 빠르게 그리기 위해 사용하는 기술은?
 
+Virtual DOM
+
 리액트에서 요소를 표현할 때는 HTML을 닮은 JSX라는 형태를 사용합니다.
 [이 글](https://velopert.com/3626)을 읽으면서 JSX에 대해 알아보세요.
 **JSX 안에 자바스크립트 값 사용하기** 이전까지는 꼭 읽어야 합니다.
@@ -56,11 +66,11 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 `src` 폴더의 코드를 한 파일에서 다른 파일을 불러오는 관계에 유의하면서 코드를 읽어보세요.
 
 > `src/index.js`의 각 줄에 주석을 달아보세요. 주석이 5개가 있어야 합니다.
-
-> `src/components/NameInput.jsx`의 9, 10번 줄에서 각 컴포넌트는 어디서 가져오는 걸까요?
-
+넵
+> `src/components/Main.jsx`의 9, 10번 줄에서 각 컴포넌트는 어디서 가져오는 걸까요?
+./SayHi.jsx ./NameInput.jsx
 > `src/components/SayHi.jsx`에서 1, 3, 9번 줄에 어떤 코드인지 설명하는 주석을 다세요.
-
+넵
 ### 3. Prop 사용해보기
 
 `src/components/Main.jsx`에서 이렇게 코드를 사용하고 있습니다.
@@ -69,7 +79,7 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 <SayHi name="김명중" />
 ```
 > name에 저장된 값 그대로 전달해서 '김명중님 안녕하세요' 라고 뜨게 코드를 바꿔봅시다.
-
+넵
 #### 참고사항
 - '김명중' 값 자체를 SayHi.jsx에 적으면 안됩니다. 즉, `name`값을 바꾸면 화면에 뜨는 값도 달라져아 합니다.
 - 힌트: [React 문서](https://reactjs-kr.firebaseapp.com/tutorial/tutorial.html)

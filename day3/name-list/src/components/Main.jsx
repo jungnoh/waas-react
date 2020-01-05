@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import NameDisplay from './NameDisplay';
+import NameDisplay from './EmptyNameDisplay';
 import NameInput from './NameInput';
 
 const Main = () => {
@@ -11,16 +11,21 @@ const Main = () => {
   };
   // NameInput에서 input을 클릭했을 때 처리할 함수
   const onAddClick = (name) => {
-    alert(name);
+    addName(name);
   };
-
+  
   return (
     <div className="container">
-      <span className="title">Name List</span>
+      <span className="title" className="blue-text">Name List</span>
       <NameInput addClick={onAddClick} />
       <div className="list-container">
-        <NameDisplay name="명순구" />
-        <NameDisplay name="정진택" />
+        {nameList.map((name, index) =>
+          <NameDisplay key={index}>        
+            <div className="name-item">
+              - {name}
+            </div>
+          </NameDisplay>
+        )}
       </div>
     </div>
   );
