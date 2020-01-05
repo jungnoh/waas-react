@@ -1,15 +1,6 @@
-.container {
-  margin-left: 20vw;
-  width: 60vw;
-  background: #DDD;
-  border-radius: 0.2rem;
-  padding: 1.5rem;
-  box-sizing: border-box;
-  display: grid;
-  height: 11rem;
-  grid-template-columns: auto 2.5rem 1rem 8rem auto;
-  grid-template-rows: 3rem 2.5rem 2.5rem;
-}
+/* .container {
+
+} */
 .text {
   grid-row: 2 / 4;
   grid-column: 4 / 5;

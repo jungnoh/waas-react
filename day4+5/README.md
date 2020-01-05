@@ -29,6 +29,13 @@ document.title = `Counter: ${value}`;
 > [보다 친절하지만 영어인 문서](https://ko.reactjs.org/docs/hooks-effect.html)
 > 를 읽고 창 제목이 제때 업데이트 되도록 수정해 봅시다.
 
+```jsx
+  useEffect(() => {
+    document.title = `Counter: ${value}`;
+  })
+```
+요런식으로 새로운 함수를 만들고 여기에 다시 똑같은거 넣어주면 됨
+
 
 ## Styled components
 
@@ -41,6 +48,8 @@ document.title = `Counter: ${value}`;
 > 5번 러인에서 `const {index, onClick} = props;`가 어떤 의미인지
 > [문서를 읽고](https://poiemaweb.com/es6-destructuring#2-%EA%B0%9D%EC%B2%B4-%EB%94%94%EC%8A%A4%ED%8A%B8%EB%9F%AD%EC%B2%98%EB%A7%81-object-destructuring)
 > 설명해 보세요.
+
+index 와 onClick 이라는 키를 가진 것들을 저기에 할당!
 
 6번 라인부터 보면, Button이라는 변수에 CSS 속성이 왕창 저장되고, 아래 `return` 부분애서
 이 값을 컴포넌트처럼 쓰고 있습니다.
@@ -70,6 +79,31 @@ Styled component는 위에서 봤듯이 난수로 클래스명을 지정해주�
 > `ClickButton.jsx`를 참고해서,
 > `Main.jsx`의 `<div className="container">`의 디자인을
 > CSS 컴포넌트로 바꿔보세요.
+
+```jsx
+  const Hehe = styled.div`
+    margin-left: 20vw;
+    width: 60vw;
+    background: #DDD;
+    border-radius: 0.2rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: grid;
+    height: 11rem;
+    grid-template-columns: auto 2.5rem 1rem 8rem auto;
+    grid-template-rows: 3rem 2.5rem 2.5rem;
+  `;
+```
+이런식으로 Hehe 라는 것을 만들었음
+이후
+```jsx
+<div className="container">
+```
+를
+```jsx
+<Hehe>
+```
+로 수정함
 
 ### 참고사항
 - Styled component는 리액트의 기능이 아닙니다.
