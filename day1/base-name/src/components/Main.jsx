@@ -1,30 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SayHi from './SayHi';
 import NameInput from './NameInput';
 
-class Main extends React.Component{
+const Main = (props) => {
 
-  constructor(props) {
-    super(props);
-    this.state = {name: '김명중'};
-  }
+  const[name, setName] = useState('김명중');
 
-  handleCreate(data) {
+  const handleCreate = (data) => {
     console.log(data);
-    alert(data.name + "님 안녕하세요");
-    this.setState({
-      name: data.name
-    })
+    alert(data + "님 안녕하세요");
+    setName(data);
   }
 
-  render(){
-    return (
-      <>
-        <NameInput onCreate={this.handleCreate.bind(this)}/>
-        <SayHi name={this.state.name} />
-      </>
-    )
-  }
+  return (
+    <>
+      <NameInput onCreate={handleCreate}/>
+      <SayHi name={name} />
+    </>
+  );
 }
 
 export default Main;
