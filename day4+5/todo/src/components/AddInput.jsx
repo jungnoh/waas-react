@@ -8,9 +8,11 @@ import styled from 'styled-components';
  */
 const AddInput = (props) => {
   const [value, setValue] = useState('');
-  const handleClick = () => {
+  const handleClick = (e) => {
     if (value.trim() === '') return;
     props.onInput(value);
+    console.log("hehe " + e.props);
+    setValue('');
   }
   return (
     <Container>
