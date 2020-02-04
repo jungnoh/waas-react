@@ -48,7 +48,7 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 >> 힌트: [Parcel 문서](https://parceljs.org/cli.html)
 - scripts 부분에 다음과 같은 코드를 추가하였다.
 ```javascript
-  "build": "parcel build src/index.html -d output"
+"build": "parcel build src/index.html -d output"
 ```
 
 ### 2. React 코드 읽어보기
