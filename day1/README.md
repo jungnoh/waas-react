@@ -66,7 +66,7 @@ React와 같이 파일을 많이 불러오고 있지만, 코드를 변환시키�
 `src` 폴더의 코드를 한 파일에서 다른 파일을 불러오는 관계에 유의하면서 코드를 읽어보세요.
 
 > `src/index.js`의 각 줄에 주석을 달아보세요. 주석이 5개가 있어야 합니다.
-- [indx.js](https://github.com/regitiger98/waas-react/blob/master/day1/base-name/src/index.js)
+- [index.js](https://github.com/regitiger98/waas-react/blob/master/day1/base-name/src/index.js)
 
 > `src/components/Main.jsx`의 9, 10번 줄에서 각 컴포넌트는 어디서 가져오는 걸까요?
 - 같은 디렉토리 안의 NameInput.jsx, SayHi.jsx 파일로부터 가져온다.

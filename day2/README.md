@@ -9,6 +9,7 @@
 
 > `components/NameInput.jsx`의 텍스트 입력란에 텍스트를 입력하면,
 > `console.log`으로 그 값을 콘솔에 출력하도록 `onChanged` 한들러를 만드세요.
+- [NameInput.jsx](https://github.com/regitiger98/waas-react/blob/master/day1/base-name/src/components/NameInput.jsx)
 
 ### 관련 문서
 - [리액트 공식 문서 - 이벤트 처리하기](https://ko.reactjs.org/docs/handling-events.html)
