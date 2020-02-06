@@ -96,6 +96,7 @@ Styled component 안의 CSS를 예쁘게 표시해줍니다.
 필요한 컴포넌트들의 구조와 디자인은 `todo`폴더에 대부분 구현되어 있습니다. 여러분이 하셔야 할 일은
 - 컴포넌트들을 props, state로 연결짓기
 - 배열에서 요소를 넣고 빼기
+- [Main.jsx](https://github.com/regitiger98/waas-react/blob/master/day4%2B5/todo/src/components/Main.jsx)
 
 
 ### 참고사항
