@@ -55,7 +55,7 @@ return (
         <span className="title blue-text">Name List</span>
         <NameInput addClick={onAddClick} />
         <div className="list-container">
-        {listItems}
+            {listItems}
         </div>
     </div>
 );
