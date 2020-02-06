@@ -29,3 +29,4 @@
 
 > Change 버튼을 누르면 `name`값을 읽어와 '노정훈님 안녕하세요.'와 같이 경고창이 뜨도록 Change 버튼의 onClick 핸들러를 작성하세요.
 >> 힌트: Arrow Function
+- [NameInput.jsx](https://github.com/regitiger98/waas-react/blob/master/day1/base-name/src/components/NameInput.jsx)
