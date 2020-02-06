@@ -14,7 +14,7 @@ const Main = () => {
       showComplete={true}
       onDelete={() => {
         todo.splice(index,1);
-        setTodo(todo);
+        setTodo([...todo]);
       }}
       onComplete={() => {
         todo.splice(index,1);
@@ -31,7 +31,7 @@ const Main = () => {
       showComplete={false}
       onDelete={() => {
         done.splice(index,1);
-        setDone(done);
+        setDone([...done]);
       }}
       onComplete={() => {}}
       done={true}
