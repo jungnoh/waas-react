@@ -77,3 +77,22 @@ Prop에 컴포넌트를 통째로 넣어줄 수 없을까요? 가능합니다.
 
 > `NameDisplay`의 구현을 참고해서, `EmptyNameDisplay`를 사용하면서
 > `NameDisplay`를 사용할 때와 똑같이 출력되도록 `Main`을 수정하세요.
+```javascript
+const listItems = nameList.map((name, index) => 
+    <div className="name-item" key={index}>
+        - {name}
+    </div>
+);
+
+return (
+    <div className="container">
+        <span className="title blue-text">Name List</span>
+        <NameInput addClick={onAddClick} />
+        <div className="list-container">
+        <NameDisplay>
+            {listItems}
+        </NameDisplay>
+        </div>
+    </div>
+);
+```

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import NameDisplay from './NameDisplay';
+import NameDisplay from './EmptyNameDisplay';
 import NameInput from './NameInput';
 
 const Main = () => {
@@ -15,7 +15,9 @@ const Main = () => {
   };
 
   const listItems = nameList.map((name, index) => 
-    <NameDisplay key={index} name={name} />
+    <div className="name-item" key={index}>
+      - {name}
+    </div>
   );
 
   return (
@@ -23,7 +25,9 @@ const Main = () => {
       <span className="title blue-text">Name List</span>
       <NameInput addClick={onAddClick} />
       <div className="list-container">
-        {listItems}
+        <NameDisplay>
+          {listItems}
+        </NameDisplay>
       </div>
     </div>
   );
