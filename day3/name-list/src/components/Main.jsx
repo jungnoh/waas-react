@@ -24,7 +24,6 @@ const Main = () => {
       <NameInput addClick={onAddClick} />
       <div className="list-container">
         {listItems}
-        {console.log(listItems)}
       </div>
     </div>
   );

@@ -33,12 +33,33 @@ HTML과 달리, 리액트는 `className` 속성을 사용합니다.
 작동하도록 코드를 수정해봅시다.
 
 > addClick 핸들러를 수정해서 `nameList`에 이름이 추가되도록 수정하세요.
+```javascript
+const onAddClick = (name) => {
+    addName(name);
+};
+```
 
 > [이 문서를 읽고](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 > 10번 라인의 `...nameList`가 어떤 기능인지 설명하세요.
+- List 안의 원소들을 나열하는 기능
 
 > 리액트에서 리스트를 어떻게 처리하는지 [리액트 공식문서](https://ko.reactjs.org/docs/lists-and-keys.html)를 읽어보고,
 > nameList의 내용이 `<NameDisplay />`들로 출력되게 수정하세요.
+```javascript
+const listItems = nameList.map((name, index) => 
+    <NameDisplay key={index} name={name} />
+);
+
+return (
+    <div className="container">
+        <span className="title blue-text">Name List</span>
+        <NameInput addClick={onAddClick} />
+        <div className="list-container">
+        {listItems}
+        </div>
+    </div>
+);
+```
 
 - 실행했을 때 Console 창에서 key와 관련된 경고가 뜨지 않아야 합니다. (어떻게 수정해야 할까요? 오류 메세지를 잘 읽어보세요)
 - [추가 설명](https://m.blog.naver.com/gi_balja/221245300411)
