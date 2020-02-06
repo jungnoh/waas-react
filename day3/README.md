@@ -19,6 +19,9 @@ $ npm run dev
 HTML과 달리, 리액트는 `className` 속성을 사용합니다.
 
 > `index.css`를 참고해서, Name List 제목이 파란색이 되도록 `className`를 수정해 보세요.
+```html
+<span className="title blue-text">Name List</span>
+```
 
 ## for문으로 리스트 출력하기
 

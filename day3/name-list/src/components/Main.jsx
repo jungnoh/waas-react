@@ -11,16 +11,20 @@ const Main = () => {
   };
   // NameInput에서 input을 클릭했을 때 처리할 함수
   const onAddClick = (name) => {
-    alert(name);
+    addName(name);
   };
+
+  const listItems = nameList.map((name, index) => 
+    <NameDisplay key={index} name={name} />
+  );
 
   return (
     <div className="container">
-      <span className="title">Name List</span>
+      <span className="title blue-text">Name List</span>
       <NameInput addClick={onAddClick} />
       <div className="list-container">
-        <NameDisplay name="명순구" />
-        <NameDisplay name="정진택" />
+        {listItems}
+        {console.log(listItems)}
       </div>
     </div>
   );
