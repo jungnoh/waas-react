@@ -28,6 +28,11 @@ document.title = `Counter: ${value}`;
 > [리액트 공식 문서](https://ko.reactjs.org/docs/hooks-reference.html#useeffect), 
 > [보다 친절하지만 영어인 문서](https://ko.reactjs.org/docs/hooks-effect.html)
 > 를 읽고 창 제목이 제때 업데이트 되도록 수정해 봅시다.
+```js
+useEffect(() => {
+  document.title=`Counter: ${value}`; 
+});
+```
 
 
 ## Styled components
@@ -41,6 +46,7 @@ document.title = `Counter: ${value}`;
 > 5번 러인에서 `const {index, onClick} = props;`가 어떤 의미인지
 > [문서를 읽고](https://poiemaweb.com/es6-destructuring#2-%EA%B0%9D%EC%B2%B4-%EB%94%94%EC%8A%A4%ED%8A%B8%EB%9F%AD%EC%B2%98%EB%A7%81-object-destructuring)
 > 설명해 보세요.
+- 객체(props)의 각 프로퍼티를 이름에 맞게 좌변 변수 리스트에 할당한다.
 
 6번 라인부터 보면, Button이라는 변수에 CSS 속성이 왕창 저장되고, 아래 `return` 부분애서
 이 값을 컴포넌트처럼 쓰고 있습니다.
@@ -70,6 +76,7 @@ Styled component는 위에서 봤듯이 난수로 클래스명을 지정해주�
 > `ClickButton.jsx`를 참고해서,
 > `Main.jsx`의 `<div className="container">`의 디자인을
 > CSS 컴포넌트로 바꿔보세요.
+- [Main.jsx](https://github.com/regitiger98/waas-react/blob/master/day4%2B5/counter/src/components/ClickButton.jsx)
 
 ### 참고사항
 - Styled component는 리액트의 기능이 아닙니다.
@@ -89,6 +96,7 @@ Styled component 안의 CSS를 예쁘게 표시해줍니다.
 필요한 컴포넌트들의 구조와 디자인은 `todo`폴더에 대부분 구현되어 있습니다. 여러분이 하셔야 할 일은
 - 컴포넌트들을 props, state로 연결짓기
 - 배열에서 요소를 넣고 빼기
+- [Main.jsx](https://github.com/regitiger98/waas-react/blob/master/day4%2B5/todo/src/components/Main.jsx)
 
 
 ### 참고사항

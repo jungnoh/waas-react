@@ -1,12 +1,31 @@
 import React, {useState} from 'react';
 
-const NameInput = (props) => {
-  const val = '';
-  return (
-    <div>
-      <input val={val} />
-      <button>Change</button>
-    </div>
-  )
+class NameInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {name: ""};
+
+    this.onChanged = this.onChanged.bind(this);
+    this.onClicked = this.onClicked.bind(this);
+  }
+
+  onChanged(e) {
+    this.setState({name: e.target.value});
+    console.log(e.target.value);
+  }
+
+  onClicked() {
+    alert(this.state.name + "님 안녕하세요.");
+  }
+
+  render() {
+    return (
+      <div>
+        <input type="text" onChange={this.onChanged} />
+        <button onClick={this.onClicked}>Change</button>
+      </div>
+    )
+  }
 }
+
 export default NameInput;
